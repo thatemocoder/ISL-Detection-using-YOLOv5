@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    /* background-image: url('wallpaper.png'); */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #121212;
+    color: rgb(47, 127, 255);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.webcam-selector {
+    margin-top: 10px;
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #b2b2b2;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.webcam-section, .file-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.webcam-container video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.text-container textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #797979;
+    resize: none;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+footer {
+    background-color: #121212;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#historySection {
+    background-color: #444;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+#historySection h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+#historyList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#historyList li {
+    color: white;
+    padding: 5px 0;
+    border-bottom: 1px solid #555;
+}
+
+.toggle-btn {
+    margin-top: 15px;
+    font-size: 13px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+#fileSection {
+    display: none; 
+}
+
+#webcamSection {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .webcam-container video {
+        max-width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}

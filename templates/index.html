@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Sign Language Detection</h1>
+            <div class="webcam-selector">
+                <label for="webcamList">Choose a Webcam: </label>
+                <select id="webcamList"></select>
+            </div>
+            <button class="toggle-btn" id="toggleBtn">Switch to File Upload</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="webcam-section active" id="webcamSection">
+            <div class="webcam-container">
+                <video id="webcam" autoplay playsinline></video>
+            </div>
+        </div>
+
+        <div class="file-section" id="fileSection">
+            <input type="file" id="fileInput" />
+        </div>
+
+        <div class="text-container">
+            <textarea id="outputText" placeholder="Waiting for input..."></textarea>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
